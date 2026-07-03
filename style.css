@@ -1,0 +1,285 @@
+/* ══════════════════════════════════
+   DMart Tithiek Tenger — style.css
+══════════════════════════════════ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── CSS VARIABLES ── */
+:root {
+  --red: #E8000E;
+  --cream: #F0EDE4;
+  --cream-text: #F5EDD8;
+  --white: #ffffff;
+  --gray-slot: #b0b0b0;
+  --text-dark: #1a1a1a;
+  --text-body: #3a3a3a;
+  --radius: 14px;
+  --bw: 5px;
+}
+
+/* ── BASE ── */
+body {
+  background: var(--cream);
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  min-height: 100vh;
+}
+
+/* ── PAGE WRAPPER ── */
+.page {
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 24px 18px 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ══════════════════════════════════
+   RED BORDER BOX
+══════════════════════════════════ */
+.red-box {
+  border: var(--bw) solid var(--red);
+  border-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ══════════════════════════════════
+   MEDIA SLOT (foto / video)
+══════════════════════════════════ */
+.media-slot {
+  width: 100%;
+  background: var(--gray-slot);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.2s;
+}
+
+.media-slot:hover {
+  background: #999;
+}
+
+.media-slot input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.media-slot .slot-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.media-slot .slot-label svg {
+  width: 26px;
+  height: 26px;
+}
+
+.media-slot img,
+.media-slot video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ══════════════════════════════════
+   DISPLAY TEXT
+   - Font  : Anton (Impact-style, upright, ultra-bold)
+   - Color : warm cream #F5EDD8
+   - Selalu di atas background merah
+══════════════════════════════════ */
+.disp {
+  font-family: 'Anton', Impact, 'Arial Black', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--cream-text);
+  line-height: 0.92;
+  letter-spacing: 0.01em;
+}
+
+/* ══════════════════════════════════
+   SECTION 1 — KENALAN YUK
+══════════════════════════════════ */
+.hero-wrap {
+  position: relative;
+}
+
+.hero-media {
+  height: 220px;
+}
+
+.hero-label {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  background: var(--red);
+  border-radius: 10px 0 calc(var(--radius) - 2px) 0;
+  padding: 12px 22px 16px 26px;
+  z-index: 10;
+}
+
+.hero-label .disp {
+  font-size: 52px;
+}
+
+/* ══════════════════════════════════
+   SECTION 2 — BRAND
+══════════════════════════════════ */
+.brand-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 4px 0;
+}
+
+.logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.logo-svg {
+  width: 180px;
+}
+
+.brand-sub {
+  font-size: 8.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #666;
+  margin-top: -4px;
+}
+
+.brand-desc {
+  font-size: 13px;
+  line-height: 1.68;
+  text-align: center;
+  color: var(--text-body);
+  font-style: italic;
+  max-width: 340px;
+}
+
+.brand-desc b {
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* ══════════════════════════════════
+   SECTION 3 — PELAYANAN KAMI
+══════════════════════════════════ */
+.services-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.services-media {
+  min-height: 150px;
+}
+
+.services-label {
+  background: var(--red);
+  padding: 10px 14px 13px;
+}
+
+.services-label .disp {
+  font-size: 44px;
+}
+
+/* ══════════════════════════════════
+   SECTION 4 — KONTAK GRID
+══════════════════════════════════ */
+.kontak-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.kontak-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.kontak-media {
+  min-height: 170px;
+}
+
+.kontak-label {
+  background: var(--red);
+  padding: 7px 10px 11px;
+}
+
+.kontak-eyebrow {
+  font-family: 'Anton', Impact, sans-serif;
+  font-size: 16px;
+  color: rgba(245, 237, 216, 0.75);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  margin-bottom: 1px;
+}
+
+.kontak-label .disp {
+  font-size: 28px;
+  line-height: 0.96;
+}
+
+/* ══════════════════════════════════
+   FOOTER
+══════════════════════════════════ */
+.footer {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  letter-spacing: 0.04em;
+}
+
+/* ══════════════════════════════════
+   TOAST NOTIFICATION
+══════════════════════════════════ */
+.toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(70px);
+  background: #111;
+  color: #fff;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  opacity: 0;
+  transition: all 0.28s;
+  z-index: 999;
+  white-space: nowrap;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* ══════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════ */
+@media (min-width: 560px) {
+  .page {
+    padding: 32px 24px 64px;
+  }
+}

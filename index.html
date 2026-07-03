@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DMart Tithiek Tenger</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ── 1: KENALAN YUK ── -->
+  <div class="hero-wrap">
+    <div class="red-box">
+      <div class="media-slot hero-media" id="slot-hero">
+        <div class="slot-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 10l4.553-2.276A1 1 0 0121 8.65v6.7a1 1 0 01-1.447.894L15 14M4 8h11a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1z"/>
+          </svg>
+          <span>Tambah foto / video</span>
+        </div>
+        <input type="file" accept="image/*,video/*" onchange="handleMedia(this,'slot-hero')" />
+      </div>
+    </div>
+    <div class="hero-label">
+      <div class="disp">Kenalan yuk!</div>
+    </div>
+  </div>
+
+  <!-- ── 2: BRAND ── -->
+  <div class="brand-section">
+    <div class="logo-wrap">
+      <svg class="logo-svg" viewBox="0 0 220 68" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(14,4)">
+          <polygon points="20,2 30,2 36,13 20,13" fill="#c8102e"/>
+          <polygon points="20,2 10,2 4,13 20,13"  fill="#e01828"/>
+          <polygon points="30,2 38,13 36,13"       fill="#9a0018"/>
+          <polygon points="10,2 4,13 6,13"         fill="#f04050"/>
+          <polygon points="4,13 36,13 20,34"       fill="#c8102e"/>
+          <polygon points="4,13 20,34 20,13"       fill="#e01828"/>
+        </g>
+        <path d="M12 14 C12 14 12 56 12 56" fill="none" stroke="#111" stroke-width="2.8" stroke-linecap="round"/>
+        <path d="M12 14 C40 14 58 24 58 35 C58 48 40 58 12 58" fill="none" stroke="#111" stroke-width="2.8" stroke-linecap="round"/>
+        <text x="56" y="54" font-family="Georgia,serif" font-size="34" fill="#111" font-style="italic">mart</text>
+        <path d="M50 60 Q105 70 168 57" fill="none" stroke="#111" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      <div class="brand-sub">Tithiek Tenger</div>
+    </div>
+    <p class="brand-desc">
+      <b>Yayasan DMart Tithiek Tenger</b><br/>
+      Ruang pemberdayaan ekonomi kreatif inklusif yang mengangkat warisan Tari Topeng Malangan. Kami memberi akses kerja nyata bagi teman-teman disabilitas melalui program magang dan workshop dengan memadukan pelestarian budaya dengan pemberdayaan ekonomi.
+    </p>
+  </div>
+
+  <!-- ── 3: PELAYANAN KAMI ── -->
+  <div class="red-box services-card">
+    <div class="media-slot services-media" id="slot-services">
+      <div class="slot-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px;">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <path d="M3 9h18M9 21V9"/>
+        </svg>
+        <span>Tambah foto / video</span>
+      </div>
+      <input type="file" accept="image/*,video/*" onchange="handleMedia(this,'slot-services')" />
+    </div>
+    <div class="services-label">
+      <div class="disp">Pelayanan kami</div>
+    </div>
+  </div>
+
+  <!-- ── 4: KONTAK GRID ── -->
+  <div class="kontak-grid">
+
+    <div class="red-box kontak-card">
+      <div class="media-slot kontak-media" id="slot-kontak1">
+        <div class="slot-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;">
+            <path d="M15 10l4.553-2.276A1 1 0 0121 8.65v6.7a1 1 0 01-1.447.894L15 14M4 8h11a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1z"/>
+          </svg>
+          <span>Tambah media</span>
+        </div>
+        <input type="file" accept="image/*,video/*" onchange="handleMedia(this,'slot-kontak1')" />
+      </div>
+      <div class="kontak-label">
+        <div class="kontak-eyebrow">Kontak</div>
+        <div class="disp">Pemesanan</div>
+      </div>
+    </div>
+
+    <div class="red-box kontak-card">
+      <div class="media-slot kontak-media" id="slot-kontak2">
+        <div class="slot-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;">
+            <path d="M15 10l4.553-2.276A1 1 0 0121 8.65v6.7a1 1 0 01-1.447.894L15 14M4 8h11a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1z"/>
+          </svg>
+          <span>Tambah media</span>
+        </div>
+        <input type="file" accept="image/*,video/*" onchange="handleMedia(this,'slot-kontak2')" />
+      </div>
+      <div class="kontak-label">
+        <div class="kontak-eyebrow">Kontak</div>
+        <div class="disp">Kerja sama/<br/>kolaborasi</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <div class="footer">@dmart.mlg</div>
+
+</div>
+
+<!-- Toast notification -->
+<div class="toast" id="toast">Media berhasil ditambahkan!</div>
+
+<script>
+  function handleMedia(input, slotId) {
+    const file = input.files[0];
+    if (!file) return;
+    const slot = document.getElementById(slotId);
+    const url = URL.createObjectURL(file);
+    const old = slot.querySelector('img, video');
+    if (old) old.remove();
+    if (file.type.startsWith('video/')) {
+      const vid = document.createElement('video');
+      vid.src = url;
+      vid.autoplay = true;
+      vid.loop = true;
+      vid.muted = true;
+      vid.playsInline = true;
+      slot.appendChild(vid);
+    } else {
+      const img = document.createElement('img');
+      img.src = url;
+      slot.appendChild(img);
+    }
+    const lbl = slot.querySelector('.slot-label');
+    if (lbl) lbl.style.display = 'none';
+    showToast('Media berhasil ditambahkan!');
+  }
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2400);
+  }
+</script>
+
+</body>
+</html>
